@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../Css/Login.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <VBox layoutY="6.0" prefHeight="400.0" prefWidth="213.0" styleClass="logo_container" stylesheets="@../Css/Login.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="0.0">
+      <FontAwesomeIconView fill="WHITE" glyphName="STETHOSCOPE" size="100" styleClass="login_container" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="login_container" text="Quản Lý Nhà Thuốc">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Text>
+   </VBox>
+   <AnchorPane layoutX="213.33333333333334" prefHeight="400.0" prefWidth="399.0" styleClass="login_form_container" stylesheets="@../Css/Login.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="213.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+      <FontAwesomeIconView glyphName="USER_MD" layoutX="180.0" layoutY="75.0" size="50" styleClass="login_form_container" AnchorPane.bottomAnchor="318.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="179.3809534708659" AnchorPane.topAnchor="32.14285659790039" />
+      <Label layoutX="159.0" layoutY="92.0" styleClass="login_form_container" text="Xin chào!" textFill="#2c9138">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tmaNhanVien" layoutX="84.0" layoutY="130.0" prefHeight="30.0" prefWidth="250.0" promptText="Mã Nhân Viên" styleClass="input_field" stylesheets="@../Css/Login.css" AnchorPane.topAnchor="130.0" />
+      <PasswordField fx:id="tpass" layoutX="84.0" layoutY="182.0" prefHeight="30.0" prefWidth="250.0" promptText="Mật khẩu " styleClass="input_field" stylesheets="@../Css/Login.css" />
+      <Button fx:id="btnLogin" defaultButton="true" layoutX="84.0" layoutY="268.0" mnemonicParsing="false" onAction="#login" onDragEntered="#login" prefHeight="40.0" prefWidth="250.0" text="Đăng nhập" />
+      <FontAwesomeIconView glyphName="USER" layoutX="52.0" layoutY="154.0" size="18" styleClass="login_form_container" text="" />
+      <FontAwesomeIconView glyphName="KEY" layoutX="51.0" layoutY="205.0" size="15" styleClass="login_form_container" />
+      <Label fx:id="loginError" layoutX="84.0" layoutY="230.0" prefHeight="24.0" prefWidth="250.0" styleClass="lblError" stylesheets="@../Css/Login.css" textFill="#ed0817">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>
+      <Button fx:id="btnChangPass" layoutX="84.0" layoutY="322.0" mnemonicParsing="false" onAction="#ChangePass" prefHeight="40.0" prefWidth="250.0" styleClass="btnDangKi" text="Đổi mật khẩu" textFill="#797d13" />
+   </AnchorPane>
+</AnchorPane>
